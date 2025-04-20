@@ -1,0 +1,42 @@
+baseURL = "https://znbsf.github.io/"
+languageCode = "zh-cn"
+title = "记-记忆碎片"
+theme = "PaperMod"
+
+[params]
+  description = "回忆回忆，陷在现在，未来未来"
+  ShowReadingTime = true
+  ShowWordCount = true
+  homeInfoParams = { Title = "你好，世界", Content = "回忆回忆，陷在现在，未来未来" }
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "归档"
+    url = "/archives"
+    weight = 2
+
+  [[menu.main]]
+    name = "标签"
+    url = "/tags"
+    weight = 3

@@ -3,7 +3,7 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - master  # 或 main，根据你的默认分支命名
+      - master  # 如果你的主分支是 main，这里要对应改成 main
 
 jobs:
   build-deploy:
@@ -21,10 +21,10 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./public
-          publish_branch: master  # 或 main，根据你的 Pages 仓库默认分支
           external_repository: znbsf/znbsf.github.io
+          publish_branch: master  # Pages 仓库的分支，通常是 master 或 main

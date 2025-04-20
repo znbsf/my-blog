@@ -1,6 +1,6 @@
 +++
 date = '2025-04-21T01:05:22+08:00'
-draft = true
+draft = false
 title = '使用hugo生成静态页面并自动部署githubPages的两个坑'
 tags = ["随笔", "hugo"]
 +++
@@ -16,3 +16,5 @@ tags = ["随笔", "hugo"]
 还有就是hugo主题是使用的 github 上的主题， 但是没有使用 submodule 的方式引入， 直接下载到本地了。 这样在使用 action 的时候就会报错， 需要在 action 中添加一个步骤， 将主题文件夹复制到指定位置。
 然后再使用 hugo 生成静态页面。
 
+然后是 md文件里 draft = false
+这个是生成静态页面的一个坑， 需要设置为 false 才能生成静态页面。
